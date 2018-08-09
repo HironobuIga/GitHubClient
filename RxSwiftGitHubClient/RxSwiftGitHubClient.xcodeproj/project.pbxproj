@@ -19,6 +19,7 @@
 		1EC74B5D211B465400739D1A /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC74B56211B465400739D1A /* RxBlocking.framework */; };
 		1EC74B5E211B465400739D1A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC74B57211B465400739D1A /* RxSwift.framework */; };
 		1EC74B5F211B465400739D1A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC74B58211B465400739D1A /* RxCocoa.framework */; };
+		1EC74B63211C72CD00739D1A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC74B62211C72CD00739D1A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1EC74B56211B465400739D1A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		1EC74B57211B465400739D1A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		1EC74B58211B465400739D1A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		1EC74B62211C72CD00739D1A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		1EC74B302119F74700739D1A /* RxSwiftGitHubClient */ = {
 			isa = PBXGroup;
 			children = (
+				1EC74B61211C72BB00739D1A /* Model */,
 				1EC74B312119F74700739D1A /* AppDelegate.swift */,
 				1EC74B332119F74700739D1A /* ViewController.swift */,
 				1EC74B352119F74700739D1A /* Main.storyboard */,
@@ -128,6 +131,14 @@
 				1EC74B52211B465300739D1A /* RxTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1EC74B61211C72BB00739D1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1EC74B62211C72CD00739D1A /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 			files = (
 				1EC74B342119F74700739D1A /* ViewController.swift in Sources */,
 				1EC74B322119F74700739D1A /* AppDelegate.swift in Sources */,
+				1EC74B63211C72CD00739D1A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
