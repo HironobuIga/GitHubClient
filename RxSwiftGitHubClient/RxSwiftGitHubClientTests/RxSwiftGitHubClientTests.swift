@@ -2,8 +2,8 @@
 //  RxSwiftGitHubClientTests.swift
 //  RxSwiftGitHubClientTests
 //
-//  Created by 伊賀裕展 on 2018/08/08.
-//  Copyright © 2018年 伊賀裕展. All rights reserved.
+//  Created by iganin on 2018/08/08.
+//  Copyright © 2018年 iganin. All rights reserved.
 //
 
 import XCTest
