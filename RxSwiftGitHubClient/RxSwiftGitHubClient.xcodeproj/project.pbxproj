@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E4008132126A1C500C5518B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4008122126A1C500C5518B /* API.swift */; };
-		1E4008152126A23700C5518B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4008142126A23700C5518B /* Result.swift */; };
+		1E40081721272EF900C5518B /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40081621272EF900C5518B /* GitHubRequest.swift */; };
 		1EC74B322119F74700739D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC74B312119F74700739D1A /* AppDelegate.swift */; };
 		1EC74B342119F74700739D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC74B332119F74700739D1A /* ViewController.swift */; };
 		1EC74B372119F74700739D1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC74B352119F74700739D1A /* Main.storyboard */; };
@@ -36,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		1E4008122126A1C500C5518B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		1E4008142126A23700C5518B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		1E40081621272EF900C5518B /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
 		1EC74B2E2119F74700739D1A /* RxSwiftGitHubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftGitHubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC74B312119F74700739D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EC74B332119F74700739D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				1E4008122126A1C500C5518B /* API.swift */,
+				1E40081621272EF900C5518B /* GitHubRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -174,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				1EC74B62211C72CD00739D1A /* User.swift */,
-				1E4008142126A23700C5518B /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,8 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E40081721272EF900C5518B /* GitHubRequest.swift in Sources */,
 				1EC74B342119F74700739D1A /* ViewController.swift in Sources */,
-				1E4008152126A23700C5518B /* Result.swift in Sources */,
 				1EC74B322119F74700739D1A /* AppDelegate.swift in Sources */,
 				1E4008132126A1C500C5518B /* API.swift in Sources */,
 				1EC74B63211C72CD00739D1A /* User.swift in Sources */,
