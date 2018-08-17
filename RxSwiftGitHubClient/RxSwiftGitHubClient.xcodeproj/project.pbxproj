@@ -77,6 +77,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E40080E2126A04D00C5518B /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1EC74B332119F74700739D1A /* ViewController.swift */,
+				1EC74B352119F74700739D1A /* Main.storyboard */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		1E40080F2126A05400C5518B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EC74B3D2119F74800739D1A /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E4008102126A06900C5518B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1EC74B382119F74800739D1A /* Assets.xcassets */,
+				1EC74B3A2119F74800739D1A /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1EC74B252119F74700739D1A = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +125,11 @@
 		1EC74B302119F74700739D1A /* RxSwiftGitHubClient */ = {
 			isa = PBXGroup;
 			children = (
-				1EC74B61211C72BB00739D1A /* Model */,
 				1EC74B312119F74700739D1A /* AppDelegate.swift */,
-				1EC74B332119F74700739D1A /* ViewController.swift */,
-				1EC74B352119F74700739D1A /* Main.storyboard */,
-				1EC74B382119F74800739D1A /* Assets.xcassets */,
-				1EC74B3A2119F74800739D1A /* LaunchScreen.storyboard */,
-				1EC74B3D2119F74800739D1A /* Info.plist */,
+				1E40080E2126A04D00C5518B /* Screen */,
+				1EC74B61211C72BB00739D1A /* Model */,
+				1E4008102126A06900C5518B /* Resources */,
+				1E40080F2126A05400C5518B /* Supporting Files */,
 			);
 			path = RxSwiftGitHubClient;
 			sourceTree = "<group>";
@@ -433,7 +457,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = RxSwiftGitHubClient/Info.plist;
+				INFOPLIST_FILE = "RxSwiftGitHubClient/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +479,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = RxSwiftGitHubClient/Info.plist;
+				INFOPLIST_FILE = "RxSwiftGitHubClient/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
