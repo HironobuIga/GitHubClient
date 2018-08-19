@@ -30,6 +30,13 @@ final class User: Mappable {
     var type: String?
     var url: String?
     
+    static func buildWithArray(userDictionaries: [[String: AnyObject]]) -> [User] {
+        let users = userDictionaries.compactMap { userDictionary -> User? in
+            guard let user = Mapper<User>().map(JSON: userDictionary) else { return nil }
+            return user
+        }
+        return users
+    }
     
     required init?(map: Map) { }
     
