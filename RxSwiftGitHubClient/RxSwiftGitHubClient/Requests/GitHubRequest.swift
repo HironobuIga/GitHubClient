@@ -6,6 +6,7 @@
 //  Copyright © 2018年 iganin. All rights reserved.
 //
 
+import Foundation
 import APIKit
 import ObjectMapper
 
@@ -16,26 +17,21 @@ extension GitHubRequest {
         return URL(string: "https://api.github.com")!
     }
     
-    func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
-        guard (200..<300).contains(urlResponse.statusCode) else {
-            throw ResponseError.unacceptableStatusCode(urlResponse.statusCode)
-        }
-    }
+//    func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
+//        guard (200..<300).contains(urlResponse.statusCode) else {
+//            throw ResponseError.unacceptableStatusCode(urlResponse.statusCode)
+//        }
+//        return
+//    }
 }
 
-extension GitHubRequest where Response: Decodable {
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Self.Response {
-        return try decodeValue(object)
-    }
-}
-
-struct FetchRepositoryRequest: GitHubRequest {
+struct FetchUsersRequest: GitHubRequest {
     var userName: String
     var path: String {
         return "/users/\(self.userName)/repos"
     }
     
-    typealias Response = [Repository]
+    typealias Response = [User]?
     
     var method: HTTPMethod {
         return .get
@@ -45,7 +41,9 @@ struct FetchRepositoryRequest: GitHubRequest {
         self.userName = userName
     }
     
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> FetchRepositoryRequest.Response {
-        return try decodeArray(object)
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [User]? {
+        guard let dictionary = object as? [[String: AnyObject]] else { return nil }
+        let users = User.buildWithArray(userDictionaries: dictionary)
+        return users
     }
 }
