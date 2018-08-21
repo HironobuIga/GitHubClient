@@ -6,15 +6,14 @@
 //  Copyright © 2018年 iganin. All rights reserved.
 //
 
-import Foundation
 import APIKit
 import RxSwift
-import ObjectMapper
 
 extension Session {
-    func rx_sendRequest<T: Request>(request: T) -> Observable<T.Response> {
+    
+    static func rx_response<T: Request>(request: T) -> Observable<T.Response> {
         return Observable.create { observer in
-            let task = self.send(request) { result in
+            let task = send(request) { result in
                 switch result {
                 case .success(let response):
                     observer.on(.next(response))
@@ -23,13 +22,12 @@ extension Session {
                     observer.onError(error)
                 }
             }
+            
+            task?.resume()
+            
             return Disposables.create { [weak task] in
                 task?.cancel()
             }
         }
-    }
-    
-    class func rx_rendRequest<T: Request>(request: T) -> Observable<T.Response> {
-        return Session.shared.rx_sendRequest(request: request)
     }
 }
