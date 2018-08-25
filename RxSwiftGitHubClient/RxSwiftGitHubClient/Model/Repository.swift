@@ -13,6 +13,7 @@ final class Repository: Mappable {
     
     var fullName = ""
     var owner: Owner?
+    var language = ""
     var updatedDateString = ""
     var url = ""
     
@@ -30,6 +31,7 @@ final class Repository: Mappable {
     func mapping(map: Map) {
         fullName <- map["full_name"]
         owner <- map["owner"]
+        language <- map["language"]
         updatedDateString <- map["updated_at"]
         url <- map["url"]
     }
