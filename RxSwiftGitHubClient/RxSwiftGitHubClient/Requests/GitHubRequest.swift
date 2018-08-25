@@ -25,13 +25,13 @@ extension GitHubRequest {
     }
 }
 
-struct FetchUsersRequest: GitHubRequest {
+struct FetchRepositoriesRequest: GitHubRequest {
     var userName: String
     var path: String {
         return "/users/\(self.userName)/repos"
     }
     
-    typealias Response = [User]?
+    typealias Response = [Repository]
     
     var method: HTTPMethod {
         return .get
@@ -41,9 +41,9 @@ struct FetchUsersRequest: GitHubRequest {
         self.userName = userName
     }
     
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [User]? {
-        guard let dictionary = object as? [[String: AnyObject]] else { return nil }
-        let users = User.buildWithArray(userDictionaries: dictionary)
-        return users
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> FetchRepositoriesRequest.Response {
+        guard let dictionary = object as? [[String: AnyObject]] else { return [] }
+        let repositories = Repository.buildWithArray(repositoryDictionaries: dictionary)
+        return repositories
     }
 }

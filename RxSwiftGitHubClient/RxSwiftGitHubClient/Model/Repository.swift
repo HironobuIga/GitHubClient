@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Repository.swift
 //  RxSwiftGitHubClient
 //
 //  Created by iganin on 2018/08/09.
@@ -9,7 +9,7 @@
 import ObjectMapper
 import Foundation
 
-final class User: Mappable {
+final class Repository: Mappable {
     
     var fullName = ""
     var owner: Owner?
@@ -17,12 +17,12 @@ final class User: Mappable {
     var url = ""
     
     
-    static func buildWithArray(userDictionaries: [[String: AnyObject]]) -> [User] {
-        let users = userDictionaries.compactMap { userDictionary -> User? in
-            guard let user = Mapper<User>().map(JSON: userDictionary) else { return nil }
-            return user
+    static func buildWithArray(repositoryDictionaries: [[String: AnyObject]]) -> [Repository] {
+        let repositories = repositoryDictionaries.compactMap { repositoryDictionary -> Repository? in
+            guard let repository = Mapper<Repository>().map(JSON: repositoryDictionary) else { return nil }
+            return repository
         }
-        return users
+        return repositories
     }
     
     required init?(map: Map) { }
