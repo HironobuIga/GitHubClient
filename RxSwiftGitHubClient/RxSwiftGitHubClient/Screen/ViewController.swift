@@ -11,7 +11,7 @@ import APIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     let disposeBag = DisposeBag()
 

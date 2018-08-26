@@ -7,8 +7,20 @@
 //
 
 import UIKit
+import PINRemoteImage
 
-class RepositoryCell: UITableViewCell {
+final class RepositoryCell: UITableViewCell {
+    static let cellIdentifier = "ListCell"
     
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var authorFullNameLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
     
+    func set(repository: Repository) {
+        authorFullNameLabel.text = repository.fullName
+        languageLabel.text = repository.language
+        if let avatarUrlString = repository.owner?.avatarUrl {
+            avatarImageView.pin_setImage(from: URL(string: avatarUrlString))
+        }
+    }
 }

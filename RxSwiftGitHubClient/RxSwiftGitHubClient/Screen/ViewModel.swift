@@ -10,10 +10,9 @@ import UIKit
 import RxSwift
 import APIKit
 
-class ListViewModel: NSObject {
+final class ListViewModel: NSObject {
     
     // MARK: - Property
-    private var cellIdentifier = "ListCell"
     private(set) var repos = Variable<[Repository]>([])
     private(set) var error = Variable<Error?>(nil)
     private let disposeBag = DisposeBag()
@@ -40,7 +39,8 @@ extension ListViewModel: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.cellIdentifier, for: indexPath) as! RepositoryCell
+        cell.set(repository: repos.value[indexPath.row])
         return cell
     }
 }
