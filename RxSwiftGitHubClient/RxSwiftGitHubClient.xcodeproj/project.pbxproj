@@ -14,6 +14,7 @@
 		1E680B0C2131662700B691FF /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E680B0B2131662700B691FF /* RepositoryCell.swift */; };
 		1E680B0E2131665100B691FF /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E680B0D2131665100B691FF /* RepositoryCell.xib */; };
 		1E680B10213264AE00B691FF /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E680B0F213264AE00B691FF /* PINRemoteImage.framework */; };
+		1E680B122132669C00B691FF /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E680B112132669C00B691FF /* PINCache.framework */; };
 		1EC74B322119F74700739D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC74B312119F74700739D1A /* AppDelegate.swift */; };
 		1EC74B342119F74700739D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC74B332119F74700739D1A /* ViewController.swift */; };
 		1EC74B372119F74700739D1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC74B352119F74700739D1A /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		1E680B0B2131662700B691FF /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		1E680B0D2131665100B691FF /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		1E680B0F213264AE00B691FF /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = Carthage/Build/iOS/PINRemoteImage.framework; sourceTree = "<group>"; };
+		1E680B112132669C00B691FF /* PINCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCache.framework; path = Carthage/Build/iOS/PINCache.framework; sourceTree = "<group>"; };
 		1EC74B2E2119F74700739D1A /* RxSwiftGitHubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftGitHubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC74B312119F74700739D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EC74B332119F74700739D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				1EC74B5D211B465400739D1A /* RxBlocking.framework in Frameworks */,
 				1EC74B5E211B465400739D1A /* RxSwift.framework in Frameworks */,
 				1EC74B5F211B465400739D1A /* RxCocoa.framework in Frameworks */,
+				1E680B122132669C00B691FF /* PINCache.framework in Frameworks */,
 				1E680B10213264AE00B691FF /* PINRemoteImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +185,7 @@
 		1EC74B51211B465200739D1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E680B112132669C00B691FF /* PINCache.framework */,
 				1E680B0F213264AE00B691FF /* PINRemoteImage.framework */,
 				1EC74B53211B465300739D1A /* APIKit.framework */,
 				1EC74B55211B465400739D1A /* ObjectMapper.framework */,
@@ -315,6 +319,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PINRemoteImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PINCache.framework",
 			);
 			outputPaths = (
 			);
