@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BWb-jr-7Dk">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Z5I-L3-UxH">
+            <objects>
+                <navigationController id="BWb-jr-7Dk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yg9-tc-0xl">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ou0-c8-mxj" kind="relationship" relationship="rootViewController" id="yjZ-jL-VTW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcG-O3-gQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1550" y="183"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eXF-ZW-jGT">
+            <objects>
+                <viewController id="Ou0-c8-mxj" customClass="ViewController" customModule="RxSwiftGitHubClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aRh-IH-xkG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rvx-TX-kPI">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rvx-TX-kPI" secondAttribute="bottom" id="NXi-oT-bUw"/>
+                            <constraint firstItem="wXO-pn-gr5" firstAttribute="trailing" secondItem="rvx-TX-kPI" secondAttribute="trailing" id="PbO-55-ZOV"/>
+                            <constraint firstItem="rvx-TX-kPI" firstAttribute="leading" secondItem="wXO-pn-gr5" secondAttribute="leading" id="TFH-FX-LTr"/>
+                            <constraint firstItem="rvx-TX-kPI" firstAttribute="top" secondItem="wXO-pn-gr5" secondAttribute="top" id="zBw-E9-vW7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wXO-pn-gr5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qSQ-jC-OJm"/>
+                    <connections>
+                        <outlet property="tableView" destination="rvx-TX-kPI" id="hG1-Dj-4oa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DFD-N9-2pk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-713" y="182"/>
+        </scene>
+    </scenes>
+</document>

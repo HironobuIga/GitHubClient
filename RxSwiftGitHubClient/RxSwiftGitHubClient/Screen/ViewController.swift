@@ -13,18 +13,58 @@ import RxCocoa
 
 final class ViewController: UIViewController {
     
+    // MARK: - Property
     let disposeBag = DisposeBag()
-
+    private let viewModel = ListViewModel()
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = viewModel
+            tableView.rowHeight = UITableViewAutomaticDimension
+            tableView.estimatedRowHeight = 58.0
+        }
+    }
+    
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        bind()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
+// MARK: - Private Function
+private extension ViewController {
+    func bind() {
+        // tableView
+        viewModel.repos.asObservable()
+            .filter {  repositories -> Bool in
+                return !repositories.isEmpty
+            }.subscribe(onNext: { [unowned self] repository in
+                self.tableView.reloadData()
+                }, onError: { error in
+            }, onCompleted: { () in
+            }) { () in
+            }.disposed(by: disposeBag)
+        
+        // searchBar
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension ViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+}
