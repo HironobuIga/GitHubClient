@@ -15,6 +15,8 @@
 		1E680B0E2131665100B691FF /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E680B0D2131665100B691FF /* RepositoryCell.xib */; };
 		1E680B10213264AE00B691FF /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E680B0F213264AE00B691FF /* PINRemoteImage.framework */; };
 		1E680B122132669C00B691FF /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E680B112132669C00B691FF /* PINCache.framework */; };
+		1E838B6F21383106004A1ED1 /* ViewReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E838B6D21383106004A1ED1 /* ViewReusable.swift */; };
+		1E838B7021383106004A1ED1 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E838B6E21383106004A1ED1 /* NibLoadable.swift */; };
 		1EC74B322119F74700739D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC74B312119F74700739D1A /* AppDelegate.swift */; };
 		1EC74B342119F74700739D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC74B332119F74700739D1A /* ViewController.swift */; };
 		1EC74B372119F74700739D1A /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC74B352119F74700739D1A /* ViewController.storyboard */; };
@@ -49,6 +51,8 @@
 		1E680B0D2131665100B691FF /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		1E680B0F213264AE00B691FF /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = Carthage/Build/iOS/PINRemoteImage.framework; sourceTree = "<group>"; };
 		1E680B112132669C00B691FF /* PINCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCache.framework; path = Carthage/Build/iOS/PINCache.framework; sourceTree = "<group>"; };
+		1E838B6D21383106004A1ED1 /* ViewReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewReusable.swift; sourceTree = "<group>"; };
+		1E838B6E21383106004A1ED1 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		1EC74B2E2119F74700739D1A /* RxSwiftGitHubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftGitHubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC74B312119F74700739D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EC74B332119F74700739D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1E838B6C213830F2004A1ED1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1E838B6E21383106004A1ED1 /* NibLoadable.swift */,
+				1E838B6D21383106004A1ED1 /* ViewReusable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		1EC74B252119F74700739D1A = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				1EC74B312119F74700739D1A /* AppDelegate.swift */,
+				1E838B6C213830F2004A1ED1 /* Protocol */,
 				1E40080E2126A04D00C5518B /* Screen */,
 				1EC74B61211C72BB00739D1A /* Model */,
 				1E4008112126A1AD00C5518B /* Requests */,
@@ -337,6 +351,8 @@
 				1E40081721272EF900C5518B /* GitHubRequest.swift in Sources */,
 				1E47DF34212C546B0090C6EA /* Owner.swift in Sources */,
 				1EC74B342119F74700739D1A /* ViewController.swift in Sources */,
+				1E838B7021383106004A1ED1 /* NibLoadable.swift in Sources */,
+				1E838B6F21383106004A1ED1 /* ViewReusable.swift in Sources */,
 				1EC74B322119F74700739D1A /* AppDelegate.swift in Sources */,
 				1E4008132126A1C500C5518B /* API.swift in Sources */,
 				1EC74B63211C72CD00739D1A /* Repository.swift in Sources */,

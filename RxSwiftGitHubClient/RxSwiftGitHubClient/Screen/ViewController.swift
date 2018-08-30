@@ -16,12 +16,14 @@ final class ViewController: UIViewController {
     // MARK: - Property
     let disposeBag = DisposeBag()
     private let viewModel = ListViewModel()
+    private var searchController: UISearchController!
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
             tableView.dataSource = viewModel
             tableView.rowHeight = UITableViewAutomaticDimension
             tableView.estimatedRowHeight = 58.0
+            RepositoryCell.registerNibTo(tableView)
         }
     }
     
@@ -29,12 +31,21 @@ final class ViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSubviews()
         bind()
     }
 }
 
 // MARK: - Private Function
 private extension ViewController {
+    func setupSubviews() {
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.obscuresBackgroundDuringPresentation = false
+    }
+    
     func bind() {
         // tableView
         viewModel.repos.asObservable()
@@ -46,8 +57,6 @@ private extension ViewController {
             }, onCompleted: { () in
             }) { () in
             }.disposed(by: disposeBag)
-        
-        // searchBar
     }
 }
 
@@ -58,13 +67,10 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
-// MARK: - UISearchBarDelegate
-extension ViewController: UISearchBarDelegate {
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+// MARK: - UISearchResultsUpdating
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        self.viewModel.reloadData(userName: searchController.searchBar.text ?? "")
+        self.navigationItem.title = searchController.searchBar.text
     }
 }

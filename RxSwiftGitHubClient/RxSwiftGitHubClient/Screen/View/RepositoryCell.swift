@@ -9,9 +9,7 @@
 import UIKit
 import PINRemoteImage
 
-final class RepositoryCell: UITableViewCell {
-    static let cellIdentifier = "ListCell"
-    
+final class RepositoryCell: UITableViewCell, NibLoadable, ViewReusable {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var authorFullNameLabel: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
