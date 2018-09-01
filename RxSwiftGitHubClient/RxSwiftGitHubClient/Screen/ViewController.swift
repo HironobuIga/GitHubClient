@@ -59,7 +59,20 @@ private extension ViewController {
             }.disposed(by: disposeBag)
         
         // キーボードの表示、非表示に合わせてtableViewのinsetを変更する
+        NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillShow)
+            .subscribe { [weak self] event in
+                guard let `self` = self,
+                    let keyboardHeight = event.element?.userInfo?[UIKeyboardFrameBeginUserInfoKey] else { return }
+                self.tableView.contentInset.bottom = keyboardHeight as! CGFloat
+        }.disposed(by: disposeBag)
         
+        NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillHide)
+            .subscribe({ [weak self] event in
+                guard let `self` = self,
+                    let keyboardHeight = event.element?.userInfo?[UIKeyboardFrameEndUserInfoKey] else { return }
+                self.tableView.contentInset.bottom = keyboardHeight as! CGFloat
+            })
+            .disposed(by: disposeBag)
     }
 }
 
