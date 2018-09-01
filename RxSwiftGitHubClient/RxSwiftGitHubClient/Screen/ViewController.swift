@@ -41,9 +41,9 @@ private extension ViewController {
     func setupSubviews() {
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
         searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
     }
     
     func bind() {
@@ -57,6 +57,9 @@ private extension ViewController {
             }, onCompleted: { () in
             }) { () in
             }.disposed(by: disposeBag)
+        
+        // キーボードの表示、非表示に合わせてtableViewのinsetを変更する
+        
     }
 }
 
