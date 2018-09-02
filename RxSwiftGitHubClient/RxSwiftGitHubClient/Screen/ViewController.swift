@@ -62,15 +62,14 @@ private extension ViewController {
         NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillShow)
             .subscribe { [weak self] event in
                 guard let `self` = self,
-                    let keyboardHeight = event.element?.userInfo?[UIKeyboardFrameBeginUserInfoKey] else { return }
-                self.tableView.contentInset.bottom = keyboardHeight as! CGFloat
+                    let keyboardHeight = event.element?.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue else { return }
+                self.tableView.contentInset.bottom = keyboardHeight.cgRectValue.size.height
         }.disposed(by: disposeBag)
         
         NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillHide)
             .subscribe({ [weak self] event in
-                guard let `self` = self,
-                    let keyboardHeight = event.element?.userInfo?[UIKeyboardFrameEndUserInfoKey] else { return }
-                self.tableView.contentInset.bottom = keyboardHeight as! CGFloat
+                guard let `self` = self else { return }
+                self.tableView.contentInset.bottom = self.view.safeAreaInsets.bottom
             })
             .disposed(by: disposeBag)
     }
