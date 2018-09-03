@@ -40,7 +40,7 @@ final class ViewController: UIViewController {
 private extension ViewController {
     func setupSubviews() {
         searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
@@ -62,7 +62,7 @@ private extension ViewController {
         NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillShow)
             .subscribe { [weak self] event in
                 guard let `self` = self,
-                    let keyboardHeight = event.element?.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue else { return }
+                    let keyboardHeight = event.element?.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return }
                 self.tableView.contentInset.bottom = keyboardHeight.cgRectValue.size.height
         }.disposed(by: disposeBag)
         
@@ -82,10 +82,10 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
-// MARK: - UISearchResultsUpdating
-extension ViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        self.viewModel.reloadData(userName: searchController.searchBar.text ?? "")
-        self.navigationItem.title = searchController.searchBar.text
+// MARK: - UISearchBarDelegate
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.reloadData(userName: searchBar.text ?? "")
+        navigationItem.title = searchBar.text
     }
 }
