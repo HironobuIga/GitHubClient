@@ -40,7 +40,6 @@ final class ViewController: UIViewController {
 private extension ViewController {
     func setupSubviews() {
         searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
@@ -49,16 +48,23 @@ private extension ViewController {
     func bind() {
         // tableView
         viewModel.repos.asObservable()
-            .filter {  repositories -> Bool in
-                return !repositories.isEmpty
-            }.subscribe(onNext: { [unowned self] repository in
+            .subscribe(onNext: { [unowned self] repository in
                 self.tableView.reloadData()
+                self.view.hideLoading()
                 }, onError: { error in
             }, onCompleted: { () in
             }) { () in
             }.disposed(by: disposeBag)
         
-        // キーボードの表示、非表示に合わせてtableViewのinsetを変更する
+        // searchBar
+        searchController.searchBar.rx.searchButtonClicked.subscribe { [weak self] _ in
+            guard let `self` = self else { return }
+            self.view.showLoading()
+            self.viewModel.reloadData(userName: self.searchController.searchBar.text ?? "")
+            self.navigationItem.title = self.searchController.searchBar.text
+        }.disposed(by: disposeBag)
+        
+        // キーボードの表示、非表示に合わせてtableViewのcontentInsetを変更する
         NotificationCenter.default.rx.notification(Notification.Name.UIKeyboardWillShow)
             .subscribe { [weak self] event in
                 guard let `self` = self,
@@ -79,13 +85,5 @@ private extension ViewController {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-
-// MARK: - UISearchBarDelegate
-extension ViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.reloadData(userName: searchBar.text ?? "")
-        navigationItem.title = searchBar.text
     }
 }

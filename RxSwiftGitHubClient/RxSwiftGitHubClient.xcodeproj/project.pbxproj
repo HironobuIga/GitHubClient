@@ -18,6 +18,7 @@
 		1E838B6F21383106004A1ED1 /* ViewReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E838B6D21383106004A1ED1 /* ViewReusable.swift */; };
 		1E838B7021383106004A1ED1 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E838B6E21383106004A1ED1 /* NibLoadable.swift */; };
 		1EAE0FD1213D6D7000AA2655 /* UIView+LoadingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE0FD0213D6D7000AA2655 /* UIView+LoadingExtension.swift */; };
+		1EAE0FD3213D700E00AA2655 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE0FD2213D700E00AA2655 /* UIView+Constraint.swift */; };
 		1EC74B322119F74700739D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC74B312119F74700739D1A /* AppDelegate.swift */; };
 		1EC74B342119F74700739D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC74B332119F74700739D1A /* ViewController.swift */; };
 		1EC74B372119F74700739D1A /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC74B352119F74700739D1A /* ViewController.storyboard */; };
@@ -57,6 +58,7 @@
 		1E838B6D21383106004A1ED1 /* ViewReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewReusable.swift; sourceTree = "<group>"; };
 		1E838B6E21383106004A1ED1 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		1EAE0FD0213D6D7000AA2655 /* UIView+LoadingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LoadingExtension.swift"; sourceTree = "<group>"; };
+		1EAE0FD2213D700E00AA2655 /* UIView+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
 		1EC74B2E2119F74700739D1A /* RxSwiftGitHubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftGitHubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC74B312119F74700739D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EC74B332119F74700739D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				1EAE0FD0213D6D7000AA2655 /* UIView+LoadingExtension.swift */,
+				1EAE0FD2213D700E00AA2655 /* UIView+Constraint.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				1E40081721272EF900C5518B /* GitHubRequest.swift in Sources */,
 				1E47DF34212C546B0090C6EA /* Owner.swift in Sources */,
 				1EC74B342119F74700739D1A /* ViewController.swift in Sources */,
+				1EAE0FD3213D700E00AA2655 /* UIView+Constraint.swift in Sources */,
 				1E838B7021383106004A1ED1 /* NibLoadable.swift in Sources */,
 				1E838B6F21383106004A1ED1 /* ViewReusable.swift in Sources */,
 				1EC74B322119F74700739D1A /* AppDelegate.swift in Sources */,
