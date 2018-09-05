@@ -116,10 +116,8 @@
 		1E40080E2126A04D00C5518B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				1E680B0A2131661200B691FF /* View */,
-				1EC74B332119F74700739D1A /* ViewController.swift */,
-				1EC74B352119F74700739D1A /* ViewController.storyboard */,
-				1E47DF35212C560F0090C6EA /* ViewModel.swift */,
+				1EAE0FD5213FF9B500AA2655 /* RepositoryDetail */,
+				1EAE0FD4213FF99400AA2655 /* RepositorySearch */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -175,6 +173,24 @@
 				1EAE0FD2213D700E00AA2655 /* UIView+Constraint.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		1EAE0FD4213FF99400AA2655 /* RepositorySearch */ = {
+			isa = PBXGroup;
+			children = (
+				1E680B0A2131661200B691FF /* View */,
+				1EC74B332119F74700739D1A /* ViewController.swift */,
+				1EC74B352119F74700739D1A /* ViewController.storyboard */,
+				1E47DF35212C560F0090C6EA /* ViewModel.swift */,
+			);
+			path = RepositorySearch;
+			sourceTree = "<group>";
+		};
+		1EAE0FD5213FF9B500AA2655 /* RepositoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoryDetail;
 			sourceTree = "<group>";
 		};
 		1EC74B252119F74700739D1A = {
