@@ -3,7 +3,6 @@
 
 target 'RxSwiftGitHubClient' do
   use_frameworks!
-  pod 'ReactorKit'
 
   target 'RxSwiftGitHubClientTests' do
     inherit! :search_paths

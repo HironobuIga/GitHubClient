@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		1E40081721272EF900C5518B /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E40081621272EF900C5518B /* GitHubRequest.swift */; };
 		1E47DF34212C546B0090C6EA /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E47DF33212C546B0090C6EA /* Owner.swift */; };
 		1E47DF36212C560F0090C6EA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E47DF35212C560F0090C6EA /* ViewModel.swift */; };
+		1E66554A2276E12E002D064B /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 1E6655492276E12D002D064B /* Cartfile */; };
 		1E680B0C2131662700B691FF /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E680B0B2131662700B691FF /* RepositoryCell.swift */; };
 		1E680B0E2131665100B691FF /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E680B0D2131665100B691FF /* RepositoryCell.xib */; };
 		1E680B10213264AE00B691FF /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E680B0F213264AE00B691FF /* PINRemoteImage.framework */; };
@@ -51,6 +52,7 @@
 		1E40081621272EF900C5518B /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
 		1E47DF33212C546B0090C6EA /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		1E47DF35212C560F0090C6EA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1E6655492276E12D002D064B /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		1E680B0B2131662700B691FF /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		1E680B0D2131665100B691FF /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		1E680B0F213264AE00B691FF /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = Carthage/Build/iOS/PINRemoteImage.framework; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		1EC74B252119F74700739D1A = {
 			isa = PBXGroup;
 			children = (
+				1E6655492276E12D002D064B /* Cartfile */,
 				1EC74B302119F74700739D1A /* RxSwiftGitHubClient */,
 				1EC74B452119F74800739D1A /* RxSwiftGitHubClientTests */,
 				1EC74B2F2119F74700739D1A /* Products */,
@@ -279,7 +282,6 @@
 				1EC74B2B2119F74700739D1A /* Frameworks */,
 				1EC74B2C2119F74700739D1A /* Resources */,
 				1EC74B60211B466B00739D1A /* ShellScript */,
-				71C145AD619CF3C8906B5CA9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E66554A2276E12E002D064B /* Cartfile in Resources */,
 				1EC74B3C2119F74800739D1A /* LaunchScreen.storyboard in Resources */,
 				1EC74B392119F74800739D1A /* Assets.xcassets in Resources */,
 				1EC74B372119F74700739D1A /* ViewController.storyboard in Resources */,
@@ -389,26 +392,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		71C145AD619CF3C8906B5CA9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RxSwiftGitHubClient/Pods-RxSwiftGitHubClient-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSwiftGitHubClient/Pods-RxSwiftGitHubClient-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		E08114F462C68C944CDF4F67 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
