@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,9 @@
 		1E47DF34212C546B0090C6EA /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E47DF33212C546B0090C6EA /* Owner.swift */; };
 		1E47DF36212C560F0090C6EA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E47DF35212C560F0090C6EA /* ViewModel.swift */; };
 		1E66554A2276E12E002D064B /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 1E6655492276E12D002D064B /* Cartfile */; };
+		1E66554E22775A26002D064B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E66554B22775A25002D064B /* RxCocoa.framework */; };
+		1E66554F22775A26002D064B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E66554C22775A25002D064B /* RxSwift.framework */; };
+		1E66555022775A26002D064B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E66554D22775A25002D064B /* RxRelay.framework */; };
 		1E680B0C2131662700B691FF /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E680B0B2131662700B691FF /* RepositoryCell.swift */; };
 		1E680B0E2131665100B691FF /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E680B0D2131665100B691FF /* RepositoryCell.xib */; };
 		1E680B10213264AE00B691FF /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E680B0F213264AE00B691FF /* PINRemoteImage.framework */; };
@@ -27,14 +30,9 @@
 		1EC74B3C2119F74800739D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC74B3A2119F74800739D1A /* LaunchScreen.storyboard */; };
 		1EC74B472119F74800739D1A /* RxSwiftGitHubClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC74B462119F74800739D1A /* RxSwiftGitHubClientTests.swift */; };
 		1EC74B5A211B465400739D1A /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC74B53211B465300739D1A /* APIKit.framework */; };
-		1EC74B5B211B465400739D1A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC74B54211B465300739D1A /* Result.framework */; };
 		1EC74B5C211B465400739D1A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC74B55211B465400739D1A /* ObjectMapper.framework */; };
-		1EC74B5D211B465400739D1A /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC74B56211B465400739D1A /* RxBlocking.framework */; };
-		1EC74B5E211B465400739D1A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC74B57211B465400739D1A /* RxSwift.framework */; };
-		1EC74B5F211B465400739D1A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC74B58211B465400739D1A /* RxCocoa.framework */; };
 		1EC74B63211C72CD00739D1A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC74B62211C72CD00739D1A /* Repository.swift */; };
 		3306BDF72D3B631FDD32F75B /* Pods_RxSwiftGitHubClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877D06DC4B21A5A79B3E10D6 /* Pods_RxSwiftGitHubClientTests.framework */; };
-		4CA1DDE6F2F25E174DA3D8B7 /* Pods_RxSwiftGitHubClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABCB1B84FFEF1458B5DD9D8B /* Pods_RxSwiftGitHubClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +51,9 @@
 		1E47DF33212C546B0090C6EA /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		1E47DF35212C560F0090C6EA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		1E6655492276E12D002D064B /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		1E66554B22775A25002D064B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/Static/RxCocoa.framework; sourceTree = "<group>"; };
+		1E66554C22775A25002D064B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/Static/RxSwift.framework; sourceTree = "<group>"; };
+		1E66554D22775A25002D064B /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/Static/RxRelay.framework; sourceTree = "<group>"; };
 		1E680B0B2131662700B691FF /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		1E680B0D2131665100B691FF /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		1E680B0F213264AE00B691FF /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = Carthage/Build/iOS/PINRemoteImage.framework; sourceTree = "<group>"; };
@@ -92,15 +93,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E66554E22775A26002D064B /* RxCocoa.framework in Frameworks */,
+				1E66554F22775A26002D064B /* RxSwift.framework in Frameworks */,
+				1E66555022775A26002D064B /* RxRelay.framework in Frameworks */,
 				1EC74B5A211B465400739D1A /* APIKit.framework in Frameworks */,
-				1EC74B5B211B465400739D1A /* Result.framework in Frameworks */,
 				1EC74B5C211B465400739D1A /* ObjectMapper.framework in Frameworks */,
-				1EC74B5D211B465400739D1A /* RxBlocking.framework in Frameworks */,
-				1EC74B5E211B465400739D1A /* RxSwift.framework in Frameworks */,
-				1EC74B5F211B465400739D1A /* RxCocoa.framework in Frameworks */,
 				1E680B122132669C00B691FF /* PINCache.framework in Frameworks */,
 				1E680B10213264AE00B691FF /* PINRemoteImage.framework in Frameworks */,
-				4CA1DDE6F2F25E174DA3D8B7 /* Pods_RxSwiftGitHubClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +234,9 @@
 		1EC74B51211B465200739D1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E66554B22775A25002D064B /* RxCocoa.framework */,
+				1E66554D22775A25002D064B /* RxRelay.framework */,
+				1E66554C22775A25002D064B /* RxSwift.framework */,
 				1E680B112132669C00B691FF /* PINCache.framework */,
 				1E680B0F213264AE00B691FF /* PINRemoteImage.framework */,
 				1EC74B53211B465300739D1A /* APIKit.framework */,
@@ -380,18 +382,17 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Static/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Static/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PINRemoteImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PINCache.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Static/RxRelay.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		E08114F462C68C944CDF4F67 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -613,6 +614,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
 				);
 				INFOPLIST_FILE = "RxSwiftGitHubClient/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -636,6 +638,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
 				);
 				INFOPLIST_FILE = "RxSwiftGitHubClient/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
